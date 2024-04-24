@@ -2,8 +2,7 @@ package ListaDeReprodução;
 
 import java.io.IOException;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 public class App {
     public static void main(String[] args) throws IOException {
@@ -38,7 +37,7 @@ public class App {
                     case 2:
                         l.tocarProxima();
                         
-                            //String code = mm.codYutube;
+
                             String url = "https://www.youtube.com/watch?v="+ur ;
                             
                             Runtime.getRuntime().exec("cmd.exe /C start microsoft-edge:" + url);
