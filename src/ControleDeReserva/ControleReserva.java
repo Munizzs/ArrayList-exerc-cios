@@ -12,7 +12,7 @@ public class ControleReserva {
     
     public void lista(){
         if(reservas.isEmpty()){
-                System.out.println("Sem reserva");
+                System.out.println("\nSem reservas");
             }else{
         for(Reserva show: reservas){           
                 System.out.printf("\n|%s - %d lugares|\n",show.responsavel,show.lugares);
