@@ -5,6 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Linear {
+    
     public static int Buscar(int vet[],int num)
     {
         int i = 0;
@@ -16,13 +17,14 @@ public class Linear {
     }       
     
     public static void main(String[] args) {
+        
         Scanner sc = new Scanner(System.in);
         Random rand = new Random();
         
         System.out.println("Quantas posições você deseja:");
-        int tam = sc.nextInt();
+        int tamanhoArray = sc.nextInt();
         
-        int buscar[] = new int [tam];
+        int buscar[] = new int [tamanhoArray];
         
         for(int i = 0;i<buscar.length;i++)
         {
@@ -30,19 +32,18 @@ public class Linear {
         }
         
         System.out.println("\nDigite o numero que voce deseja pegar a posição:");
-        int x = sc.nextInt();      
+        int numero = sc.nextInt();      
         
-        int i = Buscar(buscar,x);
+        int posicao = Buscar(buscar,numero);
         
-        int g=0;
+        int contador=0;
         
-        for(int s : buscar){
-            
-            System.out.println(g+"- "+s);
-            g++;
+        for(int s : buscar){           
+            System.out.println(contador+"- "+s);
+            contador++;
         }
         
-        System.out.printf("\nO numero %d esta na posição %d\n",x,i);
+        System.out.printf("\nO numero %d esta na posição %d\n",contador,posicao);
         }
         
     }
