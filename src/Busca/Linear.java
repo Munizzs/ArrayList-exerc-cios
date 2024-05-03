@@ -6,8 +6,24 @@ import java.util.Scanner;
 
 public class Linear {
     
-    public static int Buscar(int vet[],int num)
+    public static void Execao(int vet[], int num) throws Exception {
+        int cont = 0;
+
+        for (int i = 0; i < vet.length; i++) {
+            if (vet[i] != num) {
+                cont++;
+            }
+        }
+
+        if (cont == vet.length) {
+            throw new Exception("Numero informado inexistente no array.");
+        }
+    }
+    
+    public static int Buscar(int vet[],int num) throws Exception
     {
+        Execao(vet, num);
+        
         int i = 0;
             while(num != vet[i])
             {
@@ -16,7 +32,7 @@ public class Linear {
         return i;
     }       
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         
         Scanner sc = new Scanner(System.in);
         Random rand = new Random();
